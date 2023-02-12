@@ -1,5 +1,6 @@
 import FeaturedPosts from "@/components/home-page/featured-post";
 import Hero from "@/components/home-page/hero";
+import { getFeaturedPosts } from "@/lib/posts-util";
 import { Fragment } from "react";
 
 const DUMMY = [
@@ -26,13 +27,22 @@ const DUMMY = [
   },
 ];
 
-function HomePage() {
+function HomePage(props) {
   return (
     <Fragment>
       <Hero />
-      <FeaturedPosts posts={DUMMY} />
+      <FeaturedPosts posts={props.posts} />
     </Fragment>
   );
+}
+
+export function getStaticProps() {
+  const featuredPosts = getFeaturedPosts();
+  return {
+    props: {
+      posts: featuredPosts,
+    },
+  };
 }
 
 export default HomePage;
