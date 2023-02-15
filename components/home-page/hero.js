@@ -13,7 +13,7 @@ function Hero(params) {
         />
         Image
       </div>
-      <h1>Hi I'm kyahn</h1>
+      <h1>Hi I&apos;m kyahn</h1>
       <p>I blog about web development</p>
     </section>
   );

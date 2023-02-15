@@ -3,9 +3,6 @@ import { MongoClient } from "mongodb";
 async function handler(req, res) {
   if (req.method === "POST") {
     const { email, name, message } = req.body;
-    console.log(email);
-    console.log(name);
-    console.log(message);
     if (
       !email ||
       !email.includes("@") ||

@@ -41,7 +41,6 @@ function PostContent(props) {
     },
     code(code) {
       // const { language, value } = code;
-      console.log(code);
       const { className, children } = code;
       const language = className.split("-")[1];
 
